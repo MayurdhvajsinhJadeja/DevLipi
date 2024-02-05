@@ -1,0 +1,9 @@
+kriya sankhya|| => {
+  @a = 1;
+  yavat(a<=10){
+    a = a + 1;
+  };
+  pratipadan a;
+};
+
+sankhya||;

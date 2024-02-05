@@ -1,0 +1,19 @@
+@a = 2;
+
+yavat (a < 100) {
+  @b = 2;
+  @notprime = 0;
+  yavat (b <= (a / 2)) {
+    yadi (!(a % b == 0)) {
+      b = b+1;
+    } anyatha {
+      b = a;
+      notprime = 1;
+    };
+  };
+  yadi (!notprime) {
+    prakashan a + ' is prime';
+    prakashan;
+  };
+  a = a + 1;
+};
