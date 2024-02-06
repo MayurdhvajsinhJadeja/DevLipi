@@ -436,95 +436,7 @@ class FunctionStmt {
     };
 };
 
-class ForStmt {
-    constructor(statement, evaluator, environment) {
-        this.evaluator = evaluator;
-        this.parser = new Parser(environment);
-        this.errorHandler = new ErrorHandler();
 
-        this.statement = statement;
-
-        this.initializer = [];
-        this.condition = [];
-        this.increment = [];
-        this.body = [];
-
-        this.index = 1;
-        this.currentToken = this.statement[this.index];
-        this.prevToken = null;
-
-        this.openingBrace = 0;
-        this.closingBrace = 0;
-
-        this.execute();
-    };
-
-    next() {
-        this.prevToken = this.statement[this.index];
-        this.index++;
-        this.currentToken = this.statement[this.index];
-        this.checkBrace();
-    };
-
-    checkBrace() {
-        if (this.currentToken) {
-            if (this.currentToken.type == 'LBRACE') {
-                this.openingBrace++;
-            };
-            if (this.currentToken.type == 'RBRACE') {
-                this.closingBrace++;
-            };
-        };
-    };
-
-    isInBlock() {
-        return this.closingBrace != this.openingBrace;
-    };
-
-    splitBlock() {
-        // Parsing initializer part
-        while (this.currentToken && this.currentToken.type != 'SEMICOLON') {
-            this.initializer.push(this.currentToken);
-            this.next();
-        }
-        this.next(); // Move past the SEMICOLON
-
-        // Parsing condition part
-        while (this.currentToken && this.currentToken.type != 'SEMICOLON') {
-            this.condition.push(this.currentToken);
-            this.next();
-        }
-        this.next(); // Move past the SEMICOLON
-
-        // Parsing increment part
-        while (this.currentToken && this.currentToken.type != 'LBRACE') {
-            this.increment.push(this.currentToken);
-            this.next();
-        }
-
-        // Move past the LBRACE
-        this.next();
-    };
-
-    execute() {
-        this.splitBlock();
-        // Implement the logic to execute the for loop
-    };
-};
-
-class ReturnStmt {
-    constructor(statement, evaluator) {
-        this.evaluator = evaluator;
-        this.expression = statement.slice(1);
-        this.value = null;
-        this.execute();
-    };
-
-    execute() {
-        this.evaluator.load(this.expression);
-        this.value = this.evaluator.evaluate().value;
-    };
-};
 
 class Parser {
     constructor(environment) {
@@ -658,23 +570,6 @@ class Parser {
         return stmt;
     }
 
-    handleFor(statement) {
-        let stmt = new ForStmt(
-            statement,
-            this.evaluator,
-            this.environment
-        );
-        return stmt;
-    };
-
-    handleReturn(statement) {
-        let stmt = new ReturnStmt(
-            statement,
-            this.evaluator
-        );
-        return stmt;
-    }
-
     handleStatement(statement) {
         // console.log(statement);
         if (statement[0].type == 'LBRACE') {
@@ -699,13 +594,6 @@ class Parser {
 
         if (statement[0].type == 'FUNCTION') {
             return this.handleFunction(statement);
-        };
-        if (statement[0].type == 'FOR') {
-            return this.handleFor(statement);
-        };
-
-        if (statement[0].type == 'RETURN') {
-            return this.handleReturn(statement);
         };
 
         return this.handleExpression(statement);

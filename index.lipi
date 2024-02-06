@@ -13,7 +13,6 @@ yavat (a < 100) {
   };
   yadi (!notprime) {
     prakashan a + ' is prime';
-    prakashan;
   };
   a = a + 1;
 };

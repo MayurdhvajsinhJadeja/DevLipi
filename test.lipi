@@ -1,0 +1,5 @@
+@i = 0;
+yavat (i<5){
+    i=i+1;
+    prakashan i;
+};
