@@ -1,9 +1,10 @@
-kriya sankhya|| => {
+kriya sankhya|baka, janaio| => {
   @a = 1;
-  yavat(a<10){
-    a = a + 1;
+  yavat(a<=10){
+    prakashan a;
+    a = a + baka + janaio;
   };
-  prakashan a;
 };
--> print the calues like this <-
-sankhya||;
+-> add the comments like this <-
+
+sankhya|1,3|;
