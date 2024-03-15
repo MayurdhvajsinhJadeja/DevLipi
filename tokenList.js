@@ -16,6 +16,8 @@ const tokenList = {
     "EQUALTO": (input) => input == '==',
 
     "FATARROW": (input) => input == '=>',
+    "COMMENT_START": (input) => input == '->',
+    "COMMENT_END": (input) => input == '<-',
 
     "LPAREN": (input) => input == '(',
     "RPAREN": (input) => input == ')',

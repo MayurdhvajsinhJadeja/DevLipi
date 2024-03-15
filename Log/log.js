@@ -4,9 +4,7 @@ class Log {
     };
 
     add(log) {
-        this.values.push({
-            'log': log,
-        });
+        this.values.push({ 'log': log });
     };
 
     error(e, ln) {

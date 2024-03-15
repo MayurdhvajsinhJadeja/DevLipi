@@ -24,6 +24,24 @@ class BlockStmt {
     };
 };
 
+class CommentStmt {
+    constructor(statement, environment) {
+        this.statement = statement;
+        // this.body = this.fetchBody();
+        this.parser = new Parser(environment);
+        // this.execute();
+    };
+
+    // fetchBody() {
+    //     return this.statement.slice(1);
+    // };
+
+    // execute() {
+    //     return;
+    // };
+}
+
+
 class PrintStmt {
     constructor(statement, evaluator, log) {
         this.log = log;
@@ -501,6 +519,10 @@ class Parser {
         return this.currentToken.type == 'SEMICOLON';
     };
 
+    isCommentStart() {
+        return this.currentToken.type == 'COMMENT_START';
+    };
+
     handleBlock(statement) {
         let stmt = new BlockStmt(
             statement,
@@ -509,6 +531,15 @@ class Parser {
         // console.log(stmt);
         return stmt;
     };
+
+    handleComment(statement) {
+        // let stmt = new CommentStmt(
+        //     statement,
+        //     new Environment(this.environment),
+        // );
+        // console.log(stmt);
+        return;
+    }
 
     handlePrint(statement) {
         let stmt = new PrintStmt(
@@ -572,9 +603,16 @@ class Parser {
 
     handleStatement(statement) {
         // console.log(statement);
+        if (!statement || statement.length === 0) {
+            return null; // Return null or handle the empty statement as needed
+        }
         if (statement[0].type == 'LBRACE') {
             return this.handleBlock(statement)
         };
+
+        if (statement[0].type == 'COMMENT_START') {
+            return this.handleComment(statement);
+        }
 
         if (statement[0].type == 'SHOW') {
             return this.handlePrint(statement);
@@ -601,8 +639,22 @@ class Parser {
 
     parse() {
         while (this.currentToken) {
+            if (this.currentToken.type === 'COMMENT_START') {
+                // Skip everything until COMMENT_END
+                while (this.currentToken && this.currentToken.type !== 'COMMENT_END') {
+                    this.next();
+                }
+                // Skip COMMENT_END
+                if (this.currentToken && this.currentToken.type === 'COMMENT_END') {
+                    this.next();
+                }
+                // Continue to the next token without handling the comment
+                continue;
+            }
+
+            // Handle other statements as usual
             if (!this.isInBlock()) {
-                if (!this.isSemicolon()) {
+                if (!this.isSemicolon() && !this.isCommentStart()) {
                     this.currentStatement.push(this.currentToken);
                 } else {
                     let stmt = this.handleStatement(this.currentStatement);
@@ -632,8 +684,7 @@ class Parser {
         };
 
         return this.statements;
-
-    };
+    }
 };
 
 module.exports = {
