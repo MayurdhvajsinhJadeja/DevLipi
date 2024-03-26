@@ -1,4 +1,5 @@
-const { Interpreter } = require('../interpreter');
+#!/usr/bin/env node
+const { Interpreter } = require('./interpreter');
 const fs = require('fs');
 
 class SanScript {
@@ -11,7 +12,7 @@ class SanScript {
 const fetchSource = () => {
   let file = process.argv[2];
   if (!file) {
-    console.log('USAGE -- [ node SanScript.js <filename.lipi> ]');
+    console.log('USAGE -- [ aarambh <filename.lipi> ]');
     process.exit(1);
   } else {
     try {
@@ -32,11 +33,11 @@ const fetchSource = () => {
   return [];
 };
 
-console.time('interpreting');
+console.time('interpreting time');
 const program = new SanScript(fetchSource());
 const logs = program.interpreter.parser.log.values;
 console.log(logs);
-console.timeEnd('interpreting');
+console.timeEnd('interpreting time');
 
 module.exports = {
   SanScript,

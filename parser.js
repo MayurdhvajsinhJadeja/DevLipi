@@ -60,7 +60,7 @@ class PrintStmt {
         this.evaluator.load(this.expression);
         this.value = this.evaluator.evaluate().value;
 
-        if (this.value != undefined) {
+        if (this.value !== undefined) {
             // console.log(this.value);
             this.log.add(this.value);
 

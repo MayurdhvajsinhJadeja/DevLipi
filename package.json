@@ -1,14 +1,36 @@
 {
-  "name": "sanscript",
+  "name": "sanscript-js-core",
   "version": "1.0.0",
-  "description": "The development of SanScript centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the SanScript code.",
-  "main": "./SanScript/SanScript.js",
+  "description": "SanScript is crafted with a backend powered by JavaScript, ensuring a robust foundation. It functions as a interpreted language, allowing step-by-step code execution. The development of SanScript centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the SanScript code.",
+  "main": "./SanScript.js",
   "files": [
-    "set-path.js"
+    "Environment/environment.js",
+    "ErrorHandler/errorHandler.js",
+    "Evaluator/evaluater.js",
+    "Log/log.js",
+    "SanScript/SanScript.js",
+    "interpreter.js",
+    "lexer.js",
+    "parser.js",
+    "tokenList.js",
+    "scriptFunction.js",
+    "package.json"
   ],
-  "scripts": {
-    "postinstall": "set-path"
+  "bin": {
+    "aarambh": "./SanScript.js"
   },
+  "keywords": [
+    "sanscript-js-core",
+    "npm",
+    "node",
+    "coding",
+    "programming",
+    "language",
+    "sanskrit",
+    "javascript",
+    "sanscript",
+    "sanscript-js-core"
+  ],
   "author": "Mayurdhvajsinh Jadeja",
   "license": "MIT"
 }

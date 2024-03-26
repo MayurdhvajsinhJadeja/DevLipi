@@ -17,9 +17,14 @@ The development of SanScript centers around three key components: Lexer, Parser,
 - The Interpreter takes the AST and executes the plan, bringing the SanScript code to life.
 - It ensures the smooth functionality of the code, step by step, aligning with the principles of JavaScript.
 
-The choice of a file extension for SanScript code is .lipi, and to execute the code, one needs to navigate to the SanScript folder and run the following command:
 
-`node SanScript.js <filename.lipi>`
+## Installation
 
-![LPI](https://github.com/MayurdhvajsinhJadeja/SanScript/assets/78637849/4e22c02d-7063-4f0e-8f4d-f89f6de1720d)
+- Install it globally using command
+`npm i -g sanscript-mjs`
+
+## Usage
+
+- The choice of a file extension for SanScript code is .lipi, and to execute the code, one needs to navigate to the SanScript folder and run the following command:
+`aarambh <filename.lipi>`
 

@@ -1,23 +1,18 @@
 class Log {
     constructor() {
-        this.values = [];
+        this.values = '';
     };
 
     add(log) {
-        this.values.push({ 'log': log });
+        console.log(log); 
     };
 
     error(e, ln) {
-        this.values.push({
-            'error': {
-                'message': e.message,
-                'line': ln,
-            }
-        });
+        console.error(`Error: ${e.message} at line ${ln}`);
     };
 
     clear() {
-        this.values = [];
+        this.values = '';
         return this;
     };
 };
