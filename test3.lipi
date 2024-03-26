@@ -15,4 +15,4 @@ yavat (a < 100) {
     prakashan a + ' is prime';
   };
   a = a + 1;
-};
+}; 

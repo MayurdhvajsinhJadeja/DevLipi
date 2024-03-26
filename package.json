@@ -1,0 +1,14 @@
+{
+  "name": "sanscript",
+  "version": "1.0.0",
+  "description": "The development of SanScript centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the SanScript code.",
+  "main": "./SanScript/SanScript.js",
+  "files": [
+    "set-path.js"
+  ],
+  "scripts": {
+    "postinstall": "set-path"
+  },
+  "author": "Mayurdhvajsinh Jadeja",
+  "license": "MIT"
+}

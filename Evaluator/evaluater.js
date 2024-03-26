@@ -438,9 +438,9 @@ class Evaluator {
 
     isReserved(token) {
         let types = [
-            "FOR",
+            // "FOR",
             "WHILE",
-            "RETURN",
+            // "RETURN",
             "SHOW",
         ];
         return types.includes(token.type);

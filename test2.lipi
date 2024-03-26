@@ -1,8 +1,8 @@
-kriya sankhya|baka, janaio| => {
+kriya sankhya|b, c| => {
   @a = 1;
   yavat(a<=10){
     prakashan a;
-    a = a + baka + janaio;
+    a = a + b + c;
   };
 };
 -> add the comments like this <-

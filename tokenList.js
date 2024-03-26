@@ -43,7 +43,7 @@ const tokenList = {
 const reserved = {
     // "pratyek": 'FOR',
     "yavat": 'WHILE',
-    "pratipadan": 'RETURN',
+    // "pratipadan": 'RETURN',
     "prakashan": "SHOW",
     "yadi": "IF",
     "anyatha": "ELSE",
