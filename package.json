@@ -1,6 +1,6 @@
 {
-  "name": "sanscript-js-core",
-  "version": "1.0.0",
+  "name": "sanscript-mj",
+  "version": "1.0.0-beta",
   "description": "SanScript is crafted with a backend powered by JavaScript, ensuring a robust foundation. It functions as a interpreted language, allowing step-by-step code execution. The development of SanScript centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the SanScript code.",
   "main": "./SanScript.js",
   "files": [
@@ -20,7 +20,7 @@
     "aarambh": "./SanScript.js"
   },
   "keywords": [
-    "sanscript-js-core",
+    "sanscript-mj",
     "npm",
     "node",
     "coding",

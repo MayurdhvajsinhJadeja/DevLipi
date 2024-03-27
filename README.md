@@ -21,7 +21,7 @@ The development of SanScript centers around three key components: Lexer, Parser,
 ## Installation
 
 - Install it globally using command
-`npm i -g sanscript-mjs`
+`npm i -g sanscript-mj`
 
 ## Usage
 
