@@ -28,3 +28,21 @@ Introducing DevLipi – the whimsical wonderland of coding crafted with a sprink
 - The choice of a file extension for DevLipi code is .lipi, and to execute the code, one needs to navigate to the DevLipi folder and run the following command:
 `aarambh <filename.lipi>`
 
+## Example
+
+```
+kriya sankhya|b, c| => {  -> Function definition taking two parameters b and c <-
+  @a = 1;  -> Initializing variable a with value 1 <-
+  yavat(a<=10){  -> Looping until the value of a is less than or equal to 10 <-
+    prakashan a;  -> Printing the current value of a <-
+    a = a + b + c;  -> Adding b and c to the current value of a and assigning it back to a <-
+  };  -> End of loop <-
+  yadi(a<10){ -> Printing text if condition is fullfilled <-
+    prakashan 'less than 10';
+  } anyatha { -> Printing text if condition is not fullfilled <-
+    prakashan 'more than or equal to 10';
+  };
+};  -> End of function definition <-
+
+sankhya|1,2|; -> Calling Function <-
+```

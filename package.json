@@ -1,6 +1,6 @@
 {
   "name": "devlipi",
-  "version": "1.0.0-beta",
+  "version": "1.0.1",
   "description": "Introducing DevLipi – the whimsical wonderland of coding crafted with a sprinkle of Sanskrit-inspired syntax.",
   "main": "./DevLipi.js",
   "files": [
@@ -19,6 +19,8 @@
   "bin": {
     "aarambh": "./DevLipi.js"
   },
+  "repository": "https://github.com/MayurdhvajsinhJadeja/DevLipi",
+  "homepage": "https://github.com/MayurdhvajsinhJadeja/DevLipi/blob/main/README.md",
   "keywords": [
     "devlipi",
     "npm",
