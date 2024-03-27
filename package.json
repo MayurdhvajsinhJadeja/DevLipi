@@ -1,14 +1,14 @@
 {
-  "name": "sanscript-mj",
+  "name": "devlipi",
   "version": "1.0.0-beta",
-  "description": "SanScript is crafted with a backend powered by JavaScript, ensuring a robust foundation. It functions as a interpreted language, allowing step-by-step code execution. The development of SanScript centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the SanScript code.",
-  "main": "./SanScript.js",
+  "description": "Introducing DevLipi – the whimsical wonderland of coding crafted with a sprinkle of Sanskrit-inspired syntax.",
+  "main": "./DevLipi.js",
   "files": [
     "Environment/environment.js",
     "ErrorHandler/errorHandler.js",
     "Evaluator/evaluater.js",
     "Log/log.js",
-    "SanScript/SanScript.js",
+    "DevLipi/DevLipi.js",
     "interpreter.js",
     "lexer.js",
     "parser.js",
@@ -17,10 +17,10 @@
     "package.json"
   ],
   "bin": {
-    "aarambh": "./SanScript.js"
+    "aarambh": "./DevLipi.js"
   },
   "keywords": [
-    "sanscript-mj",
+    "devlipi",
     "npm",
     "node",
     "coding",
@@ -28,8 +28,7 @@
     "language",
     "sanskrit",
     "javascript",
-    "sanscript",
-    "sanscript-js-core"
+    "devlipi-js-core"
   ],
   "author": "Mayurdhvajsinh Jadeja",
   "license": "MIT"

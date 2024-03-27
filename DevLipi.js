@@ -2,7 +2,7 @@
 const { Interpreter } = require('./interpreter');
 const fs = require('fs');
 
-class SanScript {
+class DevLipi {
   constructor(input) {
     this.input = input;
     this.interpreter = new Interpreter(this.input);
@@ -34,11 +34,11 @@ const fetchSource = () => {
 };
 
 console.time('interpreting time');
-const program = new SanScript(fetchSource());
+const program = new DevLipi(fetchSource());
 const logs = program.interpreter.parser.log.values;
 console.log(logs);
 console.timeEnd('interpreting time');
 
 module.exports = {
-  SanScript,
+  DevLipi,
 };

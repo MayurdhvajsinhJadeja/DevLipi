@@ -1,6 +1,6 @@
-# SanScript
+# DevLipi
 
-The development of SanScript centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the SanScript code. Here's a brief overview of each:
+Introducing DevLipi – the whimsical wonderland of coding crafted with a sprinkle of Sanskrit-inspired syntax. DevLipi is crafted with a backend powered by JavaScript, ensuring a robust foundation. It functions as a interpreted language, allowing step-by-step code execution. The development of DevLipi centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the DevLipi code.
 
 ## Lexer:
 
@@ -14,17 +14,17 @@ The development of SanScript centers around three key components: Lexer, Parser,
 
 ## Interpreter:
 
-- The Interpreter takes the AST and executes the plan, bringing the SanScript code to life.
+- The Interpreter takes the AST and executes the plan, bringing the DevLipi code to life.
 - It ensures the smooth functionality of the code, step by step, aligning with the principles of JavaScript.
 
 
 ## Installation
 
 - Install it globally using command
-`npm i -g sanscript-mj`
+`npm i -g devlipi`
 
 ## Usage
 
-- The choice of a file extension for SanScript code is .lipi, and to execute the code, one needs to navigate to the SanScript folder and run the following command:
+- The choice of a file extension for DevLipi code is .lipi, and to execute the code, one needs to navigate to the DevLipi folder and run the following command:
 `aarambh <filename.lipi>`
 
