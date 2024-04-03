@@ -16,7 +16,7 @@ class ErrorHandler {
             throw new Error(err);
         } catch (e) {
             // console.error(e);
-            this.log.error(e, line);
+            this.log.error(e);
             // process.exit(1);
         };
     };

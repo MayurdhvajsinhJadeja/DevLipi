@@ -74,25 +74,31 @@ class Lexer {
             "col": this.char.col,
             "value": "",
         };
-
+    
         if (this.peakNext()) {
             this.next();
         } else {
             this.errorHandler.throw('EOF WHILE PARSING STRING', this.currentToken.line, this.currentToken.col);
         }
-
-        while (this.char.type != "QUOTE") {
-            this.currentToken.value = this.currentToken.value.concat(this.char.value);
+    
+        while (this.char.type !== "QUOTE") {
+            if (this.char.type === "COLON") { // Handle colon as part of the string
+                this.currentToken.value += this.char.value;
+            } else {
+                this.currentToken.value += this.char.value;
+            }
             this.next();
             if (!this.char) {
                 this.errorHandler.throw('EOF WHILE PARSING STRING', this.currentToken.line, this.currentToken.col);
-            };
-        };
+            }
+        }
+    
         this.tokens.push(this.currentToken);
         this.resetCurrentToken();
         this.next();
         this.lex();
-    };
+    }
+    
 
     handleNum() {
         let hasDecimal = false;

@@ -29,6 +29,7 @@ const tokenList = {
 
     "SEMICOLON": (input) => input == ';',
     "QUOTE": (input) => input == "'",
+    "COLON": (input) => input == ":",
     "DOT": (input) => input == '.',
 
     "DECLARATOR": (input) => input == '@',
