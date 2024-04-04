@@ -16,14 +16,12 @@ const fetchSource = () => {
     process.exit(1);
   } else {
     try {
-      if (!fs.existsSync(file)) {
-        console.log(`ERROR: File '${file}' not found`);
-        process.exit(1);
-      } else if (!file.endsWith('.lipi')) {
-        console.log('ERROR: Please provide a .lipi extension file');
+      const filename = file.endsWith('.lipi') ? file : file + '.lipi';
+      if (!fs.existsSync(filename)) {
+        console.log(`ERROR: File '${filename}' not found`);
         process.exit(1);
       }
-      const data = fs.readFileSync(file, 'utf8');
+      const data = fs.readFileSync(filename, 'utf8');
       return data;
     } catch (e) {
       console.log('Error:', e.stack);
