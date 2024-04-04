@@ -1,7 +1,7 @@
 {
   "name": "devlipi",
-  "version": "1.0.14",
-  "description": "Introducing DevLipi – the whimsical wonderland of coding crafted with a sprinkle of Sanskrit-inspired syntax.",
+  "version": "2.0.1",
+  "description": "Introducing DevLipi – – a programming language in Sanskrit! 🕉️",
   "main": "./DevLipi.js",
   "files": [
     "Environment/environment.js",
@@ -33,9 +33,6 @@
     "javascript",
     "devlipi-js-core"
   ],
-  "scripts": {
-    "devlipi": "echo 'DevLipi is installed. Use `aarambh <filename.lipi>` to run your code.'"
-  },
   "author": "Mayurdhvajsinh Jadeja",
   "license": "MIT",
   "funding": {

@@ -1,6 +1,6 @@
 # DevLipi
 
-Introducing DevLipi – the whimsical wonderland of coding crafted with a sprinkle of Sanskrit-inspired syntax. DevLipi is crafted with a backend powered by JavaScript, ensuring a robust foundation. It functions as a interpreted language, allowing step-by-step code execution. The development of DevLipi centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the DevLipi code.
+Introducing DevLipi – – a programming language in Sanskrit inspired syntax 🕉️. DevLipi is crafted with a backend powered by JavaScript, ensuring a robust foundation. It functions as a interpreted language, allowing step-by-step code execution. The development of DevLipi centers around three key components: Lexer, Parser, and Interpreter. These components work in harmony to process and execute the DevLipi code.
 
 ## Lexer:
 
@@ -30,16 +30,16 @@ Introducing DevLipi – the whimsical wonderland of coding crafted with a sprink
 
 ## Example
 
-```
+```devlipi
 kriya sankhya|b, c| => {  -> Function definition taking two parameters b and c <-
   @a = 1;  -> Initializing variable a with value 1 <-
   yavat(a<=10){  -> Looping until the value of a is less than or equal to 10 <-
     prakashan a;  -> Printing the current value of a <-
     a = a + b + c;  -> Adding b and c to the current value of a and assigning it back to a <-
   };  -> End of loop <-
-  yadi(a<10){ -> Printing text if condition is fullfilled <-
+  yadi(a<10){ -> Printing text if condition is fulfilled <-
     prakashan 'less than 10';
-  } anyatha { -> Printing text if condition is not fullfilled <-
+  } anyatha { -> Printing text if condition is not fulfilled <-
     prakashan 'more than or equal to 10';
   };
 };  -> End of function definition <-
